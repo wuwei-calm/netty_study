@@ -19,6 +19,7 @@ public class LoginHandler extends ChannelInboundHandlerAdapter {
 		this.userService = userService;
 	}
 
+	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		if (msg instanceof LoginRequest) {
 			LoginRequest loginRequest = (LoginRequest) msg;
